@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Music Player</title>
+    <link rel='stylesheet' href='./css/css.css'>
+    <link rel='stylesheet' href='./css/icon.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="bg-before"></div>
+    <div id="bg"></div>
+    <!-- &#xE040 循环 -->
+    <!-- &#xE050; 音量-->
+    <!-- &#xE041;单曲循环 -->
+    <!-- &#xE043; 随机-->
+    <audio style= "display: none" id="id-audio-player" controls="controls" src=""></audio>
+    <main>
+        <div id="albumCover"></div>
+        <div id="progress">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="title">
+            <div id="title-text">乐游记 // 银临 X 徐梦圆</div>
+        </div>
+        <div id="controls">
+            <div class="control"><span class="material-icons icon">&#xE040;</span></div>
+            <div class="control"><span class="material-icons icon">&#xE043;</span></div>
+            <div class="control"><span class="material-icons icon">&#xE045;</span></div>
+            <div class="control" id="controls-play" onclick="play()">
+                <span class="material-icons icon icon-play">&#xE037;</span>
+                <span class="material-icons icon icon-pause">&#xE034;</span>
+            </div>
+            <div class="control"><span class="material-icons icon">&#xE044;</span></div>
+            <div class="control"><span class="material-icons icon">&#xE041;</span></div>
+            <div class="control"><span class="material-icons icon">&#xE050;</span></div>
+        </div>
+    </main>
+    <!-- <audio id="id-audio-player" controls="controls" src=""></audio>
+    <br>
+    <span id="id-audio-duration"></span>
+    <span id="id-audio-time"></span>
+    <br>
+    <div class="kfc-songs">
+        <button class="kfc-song" data-index='0' data-path='./songs/1.mp3'>播放第一首歌</button>
+        <button class="kfc-song" data-index='1' data-path='./songs/2.mp3'>播放第二首歌</button>
+        <button class="kfc-song" data-index='2' data-path='./songs/3.mp3'>播放第三首歌</button>
+    </div>
+    <br>
+    <div>
+        <button id="kfc-last" class="kfc-check" data-offset="-1">上一首</button>
+        <button id="kfc-next" class="kfc-check" data-offset="1">下一首</button>
+    </div>
+    <br>
+    <div>
+        <button class="kfc-choice" data-mode='random'>随机播放</button>
+        <button class="kfc-choice" data-mode='single'>单曲循环</button>
+    </div> -->
+    <script src="./js/songs.js"></script>
+</body>
+
+</html>

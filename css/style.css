@@ -1,0 +1,194 @@
+/* Color Of The Year -- https://colorganize.com/?palette=75 */
+
+body {
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    cursor: default;
+}
+
+/* ################### 背景封面 ####################################*/
+
+#bg-before {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: inset 0 0 200px #000;
+    background: url(../pics/2.jpg) 0/cover fixed;
+    filter: blur(20px);
+    animation: blurAni 24s infinite;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: bgAni 18s infinite;
+}
+
+@keyframes blurAni {
+    0% {
+        filter: blur(20px);
+    }
+    25% {
+        filter: blur(5px);
+    }
+    50% {
+        filter: blur(15px);
+    }
+    75% {
+        filter: blur(0);
+    }
+    100% {
+        filter: blur(20px);
+    }
+}
+
+@keyframes bgAni {
+    0% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    17% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    33% {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    50% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    67% {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+main {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    left: 0;
+    bottom: 2rem;
+    padding: 0 calc(50% - 10rem);
+    text-align: center;
+}
+
+/* ################### 专辑封面 ####################################*/
+
+#albumCover {
+    width: 100%;
+    height: 20rem;
+    background-image: url(../pics/2.jpg);
+    background-size: cover;
+    display: inline-block;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+}
+
+#progress {
+    width: 100%;
+    background-color: rgba(142, 166, 208, 0.2);
+}
+
+#progress-bar {
+    width: 0%;
+    height: .4rem;
+    background-color: red;
+}
+/* TODO: 怎样关联progress-bar */
+#progress-bar.play {
+    animation: progress-bar 240s infinite;
+}
+/* TODO: 点击暂停，停止动画效果 */
+#progress-bar.pause {}
+
+@keyframes progress-bar {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+#title {
+    margin: 1rem 0;
+    width: 100%;
+    overflow: hidden;
+    height: 1.1rem;
+}
+
+#title-text {
+    animation: scrolling-text 16s linear infinite;
+}
+
+@keyframes scrolling-text {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control {
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1px;
+    transition: transform .3s, box-shadow .5s, text-shadow .5s;
+}
+
+.control:hover, .control:focus {
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.control:active {
+    transform: scale(0.9);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.control .icon {
+    font-size: 2.7rem;
+}
+
+#controls-play {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+}
+
+#controls-play .icon {
+    font-size: 4rem;
+}
+
+#controls-play .icon-pause {
+    display: none;
+}
+
+#controls-play.play .icon-pause {
+    display: block;
+}
+
+#controls-play.play .icon-play {
+    display: none;
+}

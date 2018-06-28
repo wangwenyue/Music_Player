@@ -100,21 +100,6 @@ main {
     height: .4rem;
     background-color: red;
 }
-/* TODO: 怎样关联progress-bar */
-#progress-bar.play {
-    animation: progress-bar 240s infinite;
-}
-/* TODO: 点击暂停，停止动画效果 */
-#progress-bar.pause {}
-
-@keyframes progress-bar {
-    from {
-        width: 0%;
-    }
-    to {
-        width: 100%;
-    }
-}
 
 #title {
     margin: 1rem 0;
